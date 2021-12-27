@@ -3,11 +3,12 @@ first_room	= rm_1;
 testing		= false;
 
 //Physics Globals
-t_scale = 1; //Global Time Scale
+t_scale = .25; //Global Time Scale
 grid_scale = 16; //Global Grid Scale
 
 // Turn off texture interpolation
 gpu_set_texfilter(false);
+application_surface_draw_enable(false);
 
 // Start Background Music
 bgm_play(2);
