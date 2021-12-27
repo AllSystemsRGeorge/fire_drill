@@ -3,8 +3,8 @@
 function move_and_collide(){
 var tol = meta_game.grid_scale/200;
 
-var x_test = x + hspd * meta_game.t_scale * meta_game.grid_scale * delta_time*60/1000000;
-var y_test = y + vspd * meta_game.t_scale * meta_game.grid_scale * delta_time*60/1000000;
+var x_test = x + hspd * meta_game.t_scale * meta_game.grid_scale * delta_time * 60/1000000;
+var y_test = y + vspd * meta_game.t_scale * meta_game.grid_scale * delta_time * 60/1000000;
 
 var x_new = x_test;
 var y_new = y_test;
