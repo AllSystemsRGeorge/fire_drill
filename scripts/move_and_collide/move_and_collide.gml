@@ -3,8 +3,10 @@
 function move_and_collide(){
 var tol = meta_game.grid_scale/200;
 
-var x_test = x + hspd * meta_game.t_scale * meta_game.grid_scale * delta_time * 60/1000000;
-var y_test = y + vspd * meta_game.t_scale * meta_game.grid_scale * delta_time * 60/1000000;
+var dx = (hspd * meta_game.t_scale * meta_game.grid_scale * delta_time * 60/1000000);
+var dy = (vspd * meta_game.t_scale * meta_game.grid_scale * delta_time * 60/1000000);
+var x_test = x + dx;
+var y_test = y + dy;
 
 var x_new = x_test;
 var y_new = y_test;
@@ -52,6 +54,6 @@ var _num = instance_place_list(x_test, y, meta_collision,_list_col_x, false);
 	on_ladder = false;
 	on_ladder = place_meeting(x_new,y_new, obj_ladder);
 	
-	x=x_new;
-	y=y_new;
+	x=round(x_new);
+	y=round(y_new);
 }
